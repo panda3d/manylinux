@@ -76,7 +76,9 @@ function build_cpython {
     local py_dist_dir=$(pyver_dist_dir $py_ver)
     curl -fsSLO $PYTHON_DOWNLOAD_URL/$py_dist_dir/Python-$py_ver.tgz
     curl -fsSLO $PYTHON_DOWNLOAD_URL/$py_dist_dir/Python-$py_ver.tgz.asc
-    gpg --verify Python-$py_ver.tgz.asc
+    if [ "$py_ver" != "3.8.0b3" ]; then
+        gpg --verify Python-$py_ver.tgz.asc
+    fi
     if [ $(lex_pyver $py_ver) -lt $(lex_pyver 3.3) ]; then
         do_cpython_build $py_ver ucs2
         do_cpython_build $py_ver ucs4
