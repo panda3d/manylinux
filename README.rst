@@ -58,7 +58,7 @@ directory for source code.
 
 The images currently contain:
 
-- CPython 2.7, 3.4, 3.5, 3.6 and 3.7, installed in
+- CPython 2.7, 3.4, 3.5, 3.6, 3.7 and 3.8, installed in
   ``/opt/python/<python tag>-<abi tag>``. The directories are named
   after the PEP 425 tags for each environment --
   e.g. ``/opt/python/cp27-cp27mu`` contains a wide-unicode CPython 2.7
@@ -80,6 +80,11 @@ Linux distributions configure CPython in ``mu``
 are also encountered in the wild. Other less common or virtually
 unheard of flag combinations (such as ``--with-pydebug`` (``d``) and
 ``--without-pymalloc`` (absence of ``m``)) are not provided.
+
+Note that `starting with CPython 3.8 <https://docs.python.org/dev/whatsnew/3.8.html#build-and-c-api-changes>`_,
+default ``sys.abiflags`` became an empty string: the ``m`` flag for pymalloc
+became useless (builds with and without pymalloc are ABI compatible) and so has
+been removed. (e.g. ``/opt/python/cp38-cp38``)
 
 Building Docker images
 ----------------------
