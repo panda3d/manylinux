@@ -2,7 +2,7 @@
 
 PYTHON_DOWNLOAD_URL=https://www.python.org/ftp/python
 # of the form <maj>.<min>.<rev> or <maj>.<min>.<rev>rc<n>
-CPYTHON_VERSIONS="2.7.18 3.4.10 3.5.10 3.6.12 3.7.9 3.8.6 3.9.0"
+CPYTHON_VERSIONS="2.7.18 3.4.10 3.5.10 3.6.12 3.7.9 3.8.6 3.9.1"
 
 # openssl version to build, with expected sha256 hash of .tar.gz
 # archive.
@@ -31,13 +31,13 @@ SQLITE_AUTOCONF_VERSION=sqlite-autoconf-3290000
 SQLITE_AUTOCONF_HASH=8e7c1e2950b5b04c5944a981cb31fffbf9d2ddda939d536838ebc854481afd5b
 SQLITE_AUTOCONF_DOWNLOAD_URL=https://www.sqlite.org/2019
 
-LIBXCRYPT_VERSION=4.4.10
+LIBXCRYPT_VERSION=4.4.17
 LIBXCRYPT_DOWNLOAD_URL=https://codeload.github.com/besser82/libxcrypt/tar.gz
-LIBXCRYPT_HASH=7da15438d93883be434b0b44a8c22f726b5f605c6d88a315e17d4f4e929c20a8
+LIBXCRYPT_HASH=7665168d0409574a03f7b484682e68334764c29c21ca5df438955a381384ca07
 
-GIT_ROOT=2.23.0
-GIT_HASH=7d84f5d6f48e95b467a04a8aa1d474e0d21abc7877998af945568d2634fea46a
-GIT_DOWNLOAD_URL=https://github.com/git/git/archive
+GIT_ROOT=git-2.29.1
+GIT_HASH=728845a66103d8d1572a656123c2c09d7aa4c0ab8f4c3dc3911e14e18c85ee67
+GIT_DOWNLOAD_URL=https://www.kernel.org/pub/software/scm/git
 
 GET_PIP_URL=https://bootstrap.pypa.io/get-pip.py
 GET_PIP_URL_CP34=https://bootstrap.pypa.io/3.4/get-pip.py
