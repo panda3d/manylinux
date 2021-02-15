@@ -40,7 +40,9 @@ GIT_HASH=728845a66103d8d1572a656123c2c09d7aa4c0ab8f4c3dc3911e14e18c85ee67
 GIT_DOWNLOAD_URL=https://www.kernel.org/pub/software/scm/git
 
 GET_PIP_URL=https://bootstrap.pypa.io/get-pip.py
+GET_PIP_URL_CP27=https://bootstrap.pypa.io/2.7/get-pip.py
 GET_PIP_URL_CP34=https://bootstrap.pypa.io/3.4/get-pip.py
+GET_PIP_URL_CP35=https://bootstrap.pypa.io/3.5/get-pip.py
 
 EPEL_RPM_HASH=0dcc89f9bf67a2a515bad64569b7a9615edc5e018f676a578d5fd0f17d3c81d4
 DEVTOOLS_HASH=a8ebeb4bed624700f727179e6ef771dafe47651131a00a78b342251415646acc

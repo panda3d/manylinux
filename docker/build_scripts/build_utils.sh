@@ -55,9 +55,15 @@ function do_cpython_build {
         ln -s python3 ${prefix}/bin/python
     fi
 
-    if [ $(lex_pyver $py_ver) -ge $(lex_pyver 3.4) ] && [ $(lex_pyver $py_ver) -lt $(lex_pyver 3.5) ]; then
+    if [ $(lex_pyver $py_ver) -lt $(lex_pyver 3.0) ]; then
+        check_var $GET_PIP_URL_CP27
+        curl -fsSL $GET_PIP_URL_CP27 | ${prefix}/bin/python
+    elif [ $(lex_pyver $py_ver) -lt $(lex_pyver 3.5) ]; then
         check_var $GET_PIP_URL_CP34
         curl -fsSL $GET_PIP_URL_CP34 | ${prefix}/bin/python
+    elif [ $(lex_pyver $py_ver) -lt $(lex_pyver 3.6) ]; then
+        check_var $GET_PIP_URL_CP35
+        curl -fsSL $GET_PIP_URL_CP35 | ${prefix}/bin/python
     else
         # --force-reinstall is to work around:
         #   https://github.com/pypa/pip/issues/5220
